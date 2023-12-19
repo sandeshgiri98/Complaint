@@ -1,0 +1,417 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        
+        .cart{
+            height: 300px;
+            width: 250px;
+            min-width: 240px;
+            margin-left: 5px;
+            border-color: black;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cart:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        
+        .inner-cart{
+            width: 280.21px;
+            height: 160px;
+            text-align: center;
+        }
+        
+        img{
+            margin-top: 20px;
+            width: 154px;
+            height: 154px;
+
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+          }
+        
+        .paragraph{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+            margin-top: 0px; 
+            width: auto;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .product-name
+        {
+            margin-left: 4px;
+        }
+        
+        .product-title__info {
+            font-size: 0px;
+            color: #3c4858;
+            position: relative;
+            max-height: 38px;
+            overflow: hidden;
+            width: 100%;
+            line-height: 1.25;
+            margin-left: 4px;
+            width: 248px;
+            margin-bottom: 0%;
+            
+        }
+        .product-title {
+            border: solid 1px #d8dbdf;
+            padding: 0 7px;
+            border-radius: 4px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 22px;
+            white-space: nowrap;
+            max-width: 100%;
+            
+        }
+        span.product-title {
+            color: #030303;
+            font: 12px 'Public Sans', sans-serif;
+            margin: 0px 3px 3px 0px;
+            padding: 0px 7px;
+        }
+        
+        .product-title__info {
+           
+                       
+        }
+        .product-title__title {
+            margin-top: -15px;
+            color: #273444;
+            font-weight: bold;
+            margin-left: 1px;
+        }
+        span.product-title {
+            color: #030303;
+            font: 12px 'Public Sans', sans-serif;
+            margin: 0px 3px 3px 0px;
+            padding: 0px 7px;
+        }
+        .price-box{
+            margin-top: 0px;
+            padding-top: 0%;
+            text-align: left;
+        
+        }
+        .price{
+            font: 15px 'Source Sans Pro', sans-serif;
+           text-align: left;
+        }
+       -->
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .cart{
+            height: 350px;
+            width: 250px;
+            min-width: 240px;
+            margin-left: 5px;
+            border-color: black;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .cart:hover {
+            
+            transform: scale(1.05);
+        }
+        
+        .inner-cart{
+            width: 250px;
+            height: 160px;
+            text-align: center;
+        }
+        
+        img{
+            /* margin-top: 20px; */
+            width: 154px;
+            height: 154px;
+        }
+        
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        
+        .paragraph{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+            width: auto;
+            margin-bottom: 0px;
+            width: 250px;
+        }
+        
+        .product-name{
+            margin-top: 14px;
+            margin-bottom: 0px;
+            margin-left: 6px;
+            line-height: 1.5;
+        }
+        
+        .product-title__info {
+            color: #3c4858;
+            position: relative;
+            max-height: 52px;
+            margin-bottom: 0%;
+            overflow: visible;
+            display: flex;
+            flex-wrap: wrap
+
+        }       
+        
+        .product-title {
+            color: #030303;
+            font: 12px 'Public Sans', sans-serif;
+            margin: 0px 3px 3px 0px;
+            padding: 0px 7px;
+            border: solid 1px #d8dbdf;
+            border-radius: 4px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 225px;
+            white-space: nowrap;
+            width: fit-content;
+        }
+        
+        .product-title__title {
+            margin: 0px;
+            color: #273444;
+            font-weight: bold;
+            margin-left: 1px;
+        }
+        .product-title__info 
+        {
+            font-size: 0px;
+            color: #3c4858;
+            position: relative;
+            max-height: 52px;
+            overflow: visible;
+            line-height: 1.25;
+            margin-left: 4px;
+            margin-bottom: 0px;
+        }
+        .price 
+        {
+            font: 15px 'Source Sans Pro', sans-serif;
+            align-items: start;
+            padding-top: 0px;
+            margin: 0px;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        .price-box{
+            display: flex;
+            gap: 20px;    
+        }
+        .SP
+        {
+            color: #030303;
+            font-size: 14px;
+            margin: 0;
+            text-decoration: line-through red 1.5px;
+        }
+        .discount
+        {
+            
+            border-radius: 4px;
+            background-color: rgb(213, 211, 211);
+            font-size: 12px;
+            display: flex;
+            color: black;
+            padding: 6px;
+            height: 7px;
+            width: 90px;
+            margin-left: 6px;
+            margin-top: 5px;
+            align-items: center;
+            
+        }
+        .save{
+            margin-right: 3px;
+        }
+        
+        .currency {
+            font-size: 13px;
+            margin-right: 3px;
+        }
+        .discount b {
+            font-size: 13px;
+        }
+        .line
+        {
+            border: none;
+            border-top: 1px solid black;
+            height: 1px;
+            width: 90%;
+            margin: 20px auto;
+            margin: 3%;
+        }
+        /* .img-cart
+        {
+            height: 35px;
+            width: auto;
+            margin: 0;
+            margin-left: 10px;
+        } */
+        /* .add-to-cart
+        {
+            margin: 0;
+        }*/
+        .button-container
+        {
+           cursor: default;
+          
+        }
+
+        .add-to-cart{
+            width: 0.2rem;
+            height: 0.2rem;
+            margin-left: 15px;
+            border: none;
+            border-radius: 50%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            border-color: black;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .button-cart{
+            width: 0.2rem;
+            height: 0.2rem;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+        .add-to-cart:hover{
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5), 0 9px 20px 0 rgba(0, 0, 0, 0.20);
+            cursor: pointer;
+            
+        }
+
+        .img-cart{
+            width: 28px;
+            height: 28px;
+            min-width: 19px;
+            min-height: 50px;
+            
+            
+            /* width: inherit;
+            height: inherit;
+           */
+        }
+
+    </style>
+</head>
+<body>
+ <div class="cart">
+  <!-- Cart link -->
+  <a href="https://www.google.com/">
+    <!-- Cart image -->
+    <div class="inner-cart">
+      <span><img src="photoes/lap11.jpg" alt="Image Not Found"></span>
+    </div>
+
+    <!-- Product details -->
+    <div class="paragraph">
+      <!-- Product name -->
+      <p class="product-name" name="product"><b>DELL XPS13</b></p>
+      <div class="product-title__title">
+        <!-- Product specifications -->
+        <p class="product-title__info">
+          <span class="product-title">13.5</span>
+          <span class="product-title">Intel i5</span>
+          <span class="product-title">8GB RAM</span>
+          <span class="product-title">256GB</span>
+          <span class="product-title">Silver Gray</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Price details -->
+    <div class="price-box">
+      <p class="price" name="price">NPR 56,000</p>
+      <p class="SP">57,700</p>
+    </div>
+
+    <!-- Discount details -->
+    <div class="discount">
+      <span class="save">Save: </span>
+      <span class="currency">NPR</span>
+      <span><b>1,700</b></span>
+    </div>
+
+    <!-- Cart line -->
+    <div class="line">
+      </a> 
+    </div>
+
+    <!-- Add to cart button -->
+    <div class="button-container">
+      <!-- <div class="add-to-cart"> -->
+      <button class="add-to-cart" type="submit">
+        <a href="https://chat.openai.com/" class="button-cart">
+          <img class="img-cart" src="photoes/addtocart.svg" alt="Image not found">
+        </a>
+      </button>
+    </div>
+
+    <!-- Alternative add to cart button -->
+    <!-- <div class="add-to-cart">
+      <img class="img-cart" src="photoes/addtocart.svg" alt="Image not found">
+    </div> -->
+ </div>
+</body>
+</html>

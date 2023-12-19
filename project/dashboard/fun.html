@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.close-button {
+  margin-top: 10px;
+}
+
+.popup-overlay.show {
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+    <button class="popup-button">Click me!</button>
+
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h2>Popup content</h2>
+    <p>This is the popup content.</p>
+    <button class="close-button">Close</button>
+  </div>
+</div>
+<script>
+    const popupButton = document.querySelector('.popup-button');
+const popupOverlay = document.querySelector('.popup-overlay');
+const closeButton = document.querySelector('.close-button');
+
+popupButton.addEventListener('click', () => {
+  popupOverlay.classList.add('show');
+});
+
+closeButton.addEventListener('click', () => {
+  popupOverlay.classList.remove('show');
+});
+
+</script>
+</body>
+</html>
